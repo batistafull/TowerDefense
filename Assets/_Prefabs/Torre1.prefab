@@ -338,6 +338,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2503192939515174519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9148345605311580378}
+  m_Layer: 0
+  m_Name: PuntaCanon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9148345605311580378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2503192939515174519}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.028571423, y: 1.47, z: 3.0285714}
+  m_LocalScale: {x: 1.4285712, y: 1, z: 1.4285715}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5159446279079857751}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4965585873049840003
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,6 +490,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2904468283353783584}
+  - component: {fileID: 7675832985775204748}
   m_Layer: 0
   m_Name: Torre1
   m_TagString: Untagged
@@ -484,6 +516,22 @@ Transform:
   - {fileID: 5159446279079857751}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7675832985775204748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6809178805827354547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9784393ab908b5e46ac17ec27237e216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TorreBase
+  enemigo: {fileID: 0}
+  prefabBala: {fileID: 7719685228960073989, guid: bd963d2d256461a43a9c2469d09c1bc8, type: 3}
+  puntasCanon:
+  - {fileID: 2503192939515174519}
 --- !u!1 &8930664899509792836
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +566,7 @@ Transform:
   m_Children:
   - {fileID: 7328195298228011828}
   - {fileID: 9162191748100286406}
+  - {fileID: 9148345605311580378}
   m_Father: {fileID: 2904468283353783584}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8434226905471790298
