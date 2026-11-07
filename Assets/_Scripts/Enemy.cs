@@ -9,12 +9,31 @@ public class Enemy : MonoBehaviour
 
     public Animator Anim;
 
+    private void OnEnable()
+    {
+        objetivo = GameObject.Find("Objetivo");
+    }
+
+    private void OnDisable()
+    {
+
+    }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GetComponent<NavMeshAgent>().SetDestination(objetivo.transform.position);
         Anim = GetComponent<Animator>();
+
+        // El objetivo ya fue destruido: el enemigo se queda quieto
+        if (objetivo == null)
+        {
+            GetComponent<NavMeshAgent>().isStopped = true;
+            Anim.SetBool("IsMoving", false);
+            return;
+        }
+
+        GetComponent<NavMeshAgent>().SetDestination(objetivo.transform.position);
         Anim.SetBool("IsMoving", true);
     }
 
@@ -28,6 +47,8 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Objetivo")
         {
+            GetComponent<Rigidbody>().isKinematic = true;
+            GetComponent<NavMeshAgent>().isStopped = true;
             Anim.SetBool("IsMoving", false);
             Anim.SetTrigger("OnObjectiveReached");
         }
@@ -35,7 +56,15 @@ public class Enemy : MonoBehaviour
 
     public void Danar()
     {
-        objetivo?.GetComponent<Objetivo>().RecibirDano(40);
+        if (objetivo == null || objetivo.GetComponent<Objetivo>().vida <= 0)
+        {
+            Anim.SetBool("IsMoving", false);
+            Anim.SetTrigger("OnObjectiveReached");
+        }
+        else
+        {
+            objetivo.GetComponent<Objetivo>().RecibirDano(40);
+        }
     }
 
     public void RecibirDano(int dano = 5)
