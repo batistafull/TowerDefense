@@ -1,0 +1,5 @@
+C:/unity_app/TowerDefense/.utmp/RelWithDebInfo/2e4s311w/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/unity_app/TowerDefense/.utmp/RelWithDebInfo/2e4s311w/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/unity_app/TowerDefense/.utmp/RelWithDebInfo/2e4s311w/armeabi-v7a/GameActivity/CMakeFiles/game.dir
+C:/unity_app/TowerDefense/.utmp/RelWithDebInfo/2e4s311w/armeabi-v7a/GameActivity/CMakeFiles/edit_cache.dir
+C:/unity_app/TowerDefense/.utmp/RelWithDebInfo/2e4s311w/armeabi-v7a/GameActivity/CMakeFiles/rebuild_cache.dir
